@@ -1,5 +1,8 @@
 class Api::V1::HomeController < ApplicationController
+
   def create
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.clean
     DataParserService.run(params).match do
       success do |user|
         render success: { success: "Data from CSV loaded successfully!"}, status: 201

@@ -28,6 +28,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rack-cors'
 gem 'solid_use_case', '~> 2.2.0'
 gem 'sprockets', '~>3.0'
+gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
